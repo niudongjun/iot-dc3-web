@@ -25,7 +25,7 @@ WORKDIR /build
 
 COPY ./ ./
 
-RUN yarn config set registry http://registry.npm.taobao.org/
+RUN yarn config set registry http://registry.npm.taobao.org && yarn config list
 RUN yarn
 RUN yarn build
 
